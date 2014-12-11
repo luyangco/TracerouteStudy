@@ -16,7 +16,7 @@ import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
 
 public class OutputParser {
-	HashMap<String, ArrayList<RoutingPath>> m_hostmap = new HashMap<String, ArrayList<RoutingPath>>();
+	public HashMap<String, ArrayList<RoutingPath>> m_hostmap = new HashMap<String, ArrayList<RoutingPath>>();
 	
 	public Calendar convertToCalendar(String date) {
 		
@@ -65,7 +65,7 @@ public class OutputParser {
             return ip;
         }
         else{
-        	if (line.contains("* * *")) {
+        	if (line.contains("*")) {
         		return new IPaddress("*.*.*.*");
         	}
             return new IPaddress("0.0.0.0");
@@ -98,7 +98,7 @@ public class OutputParser {
 				} else if (line.startsWith("Timestamp: ")) {
 					String ts[] = line.split(" ");
 					path.setTimestamp(convertToCalendar(ts[1]));
-				} else if (line.isEmpty()) { // detect a new line
+				} else if (line.startsWith("####")) { // detect a new line
 					pathList.add(path);
 				} else {
 					path.add(string2IP(line));

@@ -1,5 +1,7 @@
 package cs513.model;
 
+import java.util.Objects;
+
 public class IPaddress {
 	String seg_1;
 	String seg_2;
@@ -46,8 +48,30 @@ public class IPaddress {
 		this.latency = latency;
 	}
 
+	/* toString that contains latency */
 	public String toString() {
 		return seg_1 + "." + seg_2 + "." + seg_3 + "." + seg_4 + " ( " + latency + "ms )";
+	}
+	
+	public String ipToString() {
+		return seg_1 + "." + seg_2 + "." + seg_3 + "." + seg_4;
+	}
+	
+	@Override
+	public boolean equals(Object ip) {
+		if (!(ip instanceof IPaddress)) {
+			return false;
+		}
+		
+		if(this.ipToString().equalsIgnoreCase(ip.toString())) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(this.ipToString());
 	}
 	
 
