@@ -93,6 +93,13 @@ public class Parser {
 //			System.out.println(stringBuffer.toString());
 
 //			System.out.println("DestIP: " + path.getDestIP());
+			int pathSize = path.getPath().size();
+			IPaddress lastNode = path.getPath().get(pathSize - 1);
+			
+			if (path.getDestIP().ipToString().equalsIgnoreCase(lastNode.ipToString()) &&
+					path.getPath().size() == 1) {
+				return;
+			}
 			bw.write("Dest: " + path.getDestIP());
 			bw.newLine();
 			bw.write("Timestamp: " + timestamp);
@@ -104,6 +111,7 @@ public class Parser {
 				bw.write(ip.toString());
 				bw.newLine();
 			}
+			bw.write("####");
 			bw.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();

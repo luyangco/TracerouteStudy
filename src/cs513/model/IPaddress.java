@@ -1,7 +1,5 @@
 package cs513.model;
 
-import java.util.Objects;
-
 public class IPaddress {
 	String seg_1;
 	String seg_2;
@@ -69,10 +67,6 @@ public class IPaddress {
 		return false;
 	}
 	
-	@Override
-	public int hashCode() {
-		return Objects.hashCode(this.ipToString());
-	}
 	
 
 }
