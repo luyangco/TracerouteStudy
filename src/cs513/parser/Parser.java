@@ -1,8 +1,10 @@
 package cs513.parser;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,28 +34,43 @@ public class Parser {
             return ip;
         }
         else{
-        	if (line.matches("\\*")) {
+        	if (line.contains("* * *")) {
         		return new IPaddress("*.*.*.*");
         	}
             return new IPaddress("0.0.0.0");
         }
 	}
 	
-	public static void showFiles(File[] files) {
+	public static void showFiles(File[] files, BufferedWriter bw) throws IOException {
 		for (File f : files) {
 			if (f.isDirectory()) {
+				FileWriter fstream = null;
+				BufferedWriter out = null;
+				if (!f.getName().equalsIgnoreCase("trace_1")) {
+					fstream = new FileWriter(f.getName()+".txt");
+					out = new BufferedWriter(fstream);
+				}
 				long startTime = System.currentTimeMillis();
 				System.out.println("Directory: " + f.getName());
-				showFiles(f.listFiles());
+				showFiles(f.listFiles(), out);
+				out.close();
 				long endTime = System.currentTimeMillis();
 				System.out.println("enduration: " + (endTime - startTime) / 1000 + " s");
 			} else {
-				extractFile(f);
+				extractFile(f, bw);
 			}
 		}
 	}
 	
-	public static void extractFile(File file) {
+	public static void extractFile(File file, BufferedWriter bw) {
+		
+		String TIMESTAMP_PATTERN = "(?:(\\d{4})-(\\d{2})-(\\d{2})\\.(\\d{2})-(\\d{2})-(\\d{2})?)";
+		Pattern pattern = Pattern.compile(TIMESTAMP_PATTERN);
+		Matcher matcher = pattern.matcher(file.getName());
+		String timestamp = null;
+        if (matcher.find()) {
+        	timestamp = matcher.group();
+        }
 		try {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -76,9 +93,18 @@ public class Parser {
 //			System.out.println(stringBuffer.toString());
 
 //			System.out.println("DestIP: " + path.getDestIP());
-//			for (IPaddress ip: path.getPath()) {
-//				System.out.println(ip);
-//			}
+			bw.write("Dest: " + path.getDestIP());
+			bw.newLine();
+			bw.write("Timestamp: " + timestamp);
+			bw.newLine();
+			for (IPaddress ip: path.getPath()) {
+				if (ip.toString().contains("0.0.0.0")) {
+					System.out.println("Couldn't recognize ip: " + file.getName());
+				}
+				bw.write(ip.toString());
+				bw.newLine();
+			}
+			bw.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -86,10 +112,13 @@ public class Parser {
 	
 	
 	public static void main(String[] args) {
-		
-		
 		File[] files = new File("c:\\Program Files (x86)\\cygwin64\\home\\ylu5\\output\\trace_1\\").listFiles();
-		showFiles(files);
+		try {
+			showFiles(files, null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}

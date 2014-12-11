@@ -1,10 +1,12 @@
 package cs513.model;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class RoutingPath {
 	ArrayList <IPaddress> m_path;
 	IPaddress m_destIP;
+	Calendar m_timestamp;
 	
 
 	public RoutingPath(IPaddress dest) {
@@ -23,9 +25,12 @@ public class RoutingPath {
 	public IPaddress getDestIP() {
 		return m_destIP;
 	}
-	
-	
-	
-	
 
+	public Calendar getTimestamp() {
+		return m_timestamp;
+	}
+
+	public void setTimestamp(Calendar m_timestamp) {
+		this.m_timestamp = m_timestamp;
+	}
 }
