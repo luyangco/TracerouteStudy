@@ -1,0 +1,187 @@
+--------------------
+Routing Loops
+
+Test1: 
+Durationn: 44 s
+Total Paths: 312991
+Persistent Loops: 7947
+Temporary Loops: 17557
+Timeouts: 28107
+Total Loops: 25504
+
+-------------------------
+Too Many Hops
+
+Test1:
+Duration: 42 s
+Too Many Hops: 28107
+
+We found that a large number of our traceroutes never completed. Possibly behind some sort of firewall.
+With a TTL of 30, many traceroutes never receive an end response from the destination and are unreachable. 
+
+------------------------
+Erroneous Routing
+
+Number of Erroneous Paths: 78
+
+Found a erroneous Path (srcIp=130.127.39.152 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-16.20-56-38)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.253.21.121 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.00-00-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.253.21.121 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.10-11-29)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=139.78.141.245 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.04-19-58)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.22-30-34)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-25.07-30-10)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-26.02-05-53)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-22.07-18-52)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=157.92.44.104 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.18-45-41)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.2.211.115 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-02.15-30-33)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.08-47-03)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.10-50-09)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-53-16)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.14-56-23)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.16-59-28)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=129.110.125.51 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.20-23-41)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=195.113.161.84 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.16-13-59)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=133.69.32.133 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-22.12-20-12)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=133.69.32.133 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.20-10-24)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=131.247.2.242 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.04-28-29)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.227.150.11 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.16-30-33)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=198.83.85.46 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-15.00-00-33)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.18-32-43)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.16-05-57)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.13-44-15)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=206.117.37.4 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.09-03-16)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=206.117.37.4 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.18-44-39)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=206.117.37.4 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.20-09-50)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-17.04-50-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-17.08-54-12)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.01-11-30)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.05-15-51)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.09-19-59)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-19.01-36-32)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-19.05-40-53)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-19.17-53-15)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-19.23-59-38)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.04-03-51)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.08-08-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.12-12-18)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.16-16-42)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-21.04-29-48)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-21.08-33-44)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-21.12-37-27)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.01-15-47)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.05-19-45)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.13-28-13)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.17-32-28)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.21-36-31)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-24.01-40-43)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-24.05-44-39)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-24.22-01-51)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-25.02-05-46)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-25.06-09-36)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-25.22-27-03)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-27.23-15-25)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.03-19-22)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.07-23-51)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.11-28-15)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-02.05-04-02)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-02.13-15-42)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-02.17-20-20)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-02.21-25-10)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.14-48-27)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.18-53-52)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.22-58-54)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-06.09-12-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-06.13-17-10)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-06.17-22-14)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-07.07-40-08)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-07.11-45-16)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-07.15-50-30)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.06-39-18)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.05-21-47)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.09-26-11)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.11-28-22)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.17-34-31)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=204.123.28.57 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.09-03-17)
+Path from opposite direction also can't reach the destination within 2 hrs
+
+
+
+
+-------------------------

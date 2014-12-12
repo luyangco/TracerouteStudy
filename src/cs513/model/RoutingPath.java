@@ -43,36 +43,33 @@ public class RoutingPath {
 		return m_srcIP;
 	}
 	
-	public IPaddress getLastHop() {
-		return m_path.get(m_path.size() - 1);
-	}
-
 	public boolean within2Hrs(String timestamp) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd.hh-mm-ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss");
 		sdf.setLenient(false);
 
 		// if not valid, it will throw ParseException
-		Date date;
+		Date date, currDate;
 		try {
 			date = sdf.parse(timestamp);
+			currDate = sdf.parse(m_timestamp);
 
 
 			// current date after 1 hour
 			Calendar currentDateAfter1Hr = Calendar.getInstance();
+			currentDateAfter1Hr.setTime(currDate);
 			currentDateAfter1Hr.add(Calendar.HOUR, 1);
 
 			// current date before 1 hour
 			Calendar currentDateBefore1Hr = Calendar.getInstance();
+			currentDateBefore1Hr.setTime(currDate);
 			currentDateBefore1Hr.add(Calendar.HOUR, -1);
 
 			/*************** verbose ***********************/
-			System.out.println("\n\ncurrentDate : "
-					+ Calendar.getInstance().getTime());
-			System.out.println("currentDateAfter3Months : "
-					+ currentDateAfter1Hr.getTime());
-			System.out.println("currentDateBefore3Months : "
-					+ currentDateBefore1Hr.getTime());
-			System.out.println("dateToValidate : " + timestamp);
+//			System.out.println("currentDateAfter1Hr : "
+//					+ currentDateAfter1Hr.getTime());
+//			System.out.println("currentDateBefore1Hr : "
+//					+ currentDateBefore1Hr.getTime());
+//			System.out.println("dateToValidate : " + timestamp);
 			/************************************************/
 
 			if (date.before(currentDateAfter1Hr.getTime())
@@ -91,5 +88,18 @@ public class RoutingPath {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public IPaddress getLastHop() {
+		int size = m_path.size();
+		return m_path.get(size - 1);
+	}
+	
+	// test
+	public static void main(String[] args) {
+		RoutingPath rp = new RoutingPath(new IPaddress("138.0.2.1"), new IPaddress("123.231.23.2"));
+		rp.setTimestamp("2014-11-16.20-56-38");
+		
+		System.out.println("Return " + rp.within2Hrs("2014-11-13.17-57-00"));
 	}
 }

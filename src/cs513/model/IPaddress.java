@@ -61,7 +61,7 @@ public class IPaddress {
 			return false;
 		}
 		
-		if(this.ipToString().equalsIgnoreCase(ip.toString())) {
+		if(this.ipToString().equalsIgnoreCase(((IPaddress)ip).ipToString())) {
 			return true;
 		}
 		return false;

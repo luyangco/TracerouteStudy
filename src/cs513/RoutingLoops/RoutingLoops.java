@@ -15,11 +15,12 @@ public class RoutingLoops {
 	int persistentLoops = 0;
 	int tempLoops = 0;
 	int totalPaths = 0;
+	int numTimeouts = 0;
 
 	public static void main(String[] args) {
 
 		RoutingLoops tester = new RoutingLoops();
-		File[] files = new File("test").listFiles();
+		File[] files = new File("output_trace_1").listFiles();
 
 		long start = System.currentTimeMillis();
 		OutputParser parser = new OutputParser();
@@ -33,36 +34,47 @@ public class RoutingLoops {
 		System.out.println("Total Paths: " + tester.totalPaths);
 		System.out.println("Persistent Loops: " + tester.persistentLoops);
 		System.out.println("Temporary Loops: " + tester.tempLoops);
+		System.out.println("Timeouts: " + tester.numTimeouts);
 		System.out.println("Total Loops: " + (tester.persistentLoops + tester.tempLoops));
 
 	}
 
-	private void process(
-			HashMap<String, ArrayList<RoutingPath>> m_hostmap) {
+	public void process(
+			HashMap<String, HashMap<String, ArrayList<RoutingPath>>> m_hostmap) {
 
-		for(Map.Entry<String, ArrayList<RoutingPath>> entry : m_hostmap.entrySet()) {
-			for(RoutingPath path : entry.getValue()) {
+		for(Map.Entry<String,HashMap<String,ArrayList<RoutingPath>>> entry : m_hostmap.entrySet()) {
+			HashMap<String,ArrayList<RoutingPath>> pathMap = entry.getValue();
+			for(Map.Entry<String,ArrayList<RoutingPath>> e : pathMap.entrySet()) {
+				for(RoutingPath path : e.getValue()) {
 
-			int pathSize = path.getPath().size();
-			Map<String, Integer> uniqueIPs = new HashMap<String, Integer>();
-			
-			for(IPaddress ip : path.getPath()) {
-				if(uniqueIPs.containsKey(ip.ipToString()) && !ip.ipToString().contains("*")) {
-					if(path.getPath().get(pathSize - 1).ipToString().
-							equalsIgnoreCase(path.getDestIP().ipToString())) {
-						tempLoops++;
-					} else { // never reaches dest, persistent
-						persistentLoops++;
+					int pathSize = path.getPath().size();
+					Map<String, Integer> uniqueIPs = new HashMap<String, Integer>();
+
+					IPaddress lasthop = path.getPath().get(pathSize - 1);
+					if(lasthop.ipToString().contains("*")) {
+						numTimeouts++;
 					}
-					System.out.println("Dest: " + path.getDestIP().ipToString() + " IP: " + ip.ipToString());
-					break;
-				} else {
-					uniqueIPs.put(ip.ipToString(), 1);
+
+					for(IPaddress ip : path.getPath()) {
+
+						if(uniqueIPs.containsKey(ip.ipToString()) && !ip.ipToString().contains("*")) {
+							if(lasthop.ipToString().equalsIgnoreCase(path.getDestIP().ipToString())) {
+								tempLoops++;
+							} else { // never reaches dest
+								persistentLoops++;
+							}
+//							System.out.println("Dest: " + path.getDestIP().ipToString() + " Time: " + path.getTimestamp());
+							break;
+						} else {
+							uniqueIPs.put(ip.ipToString(), 1);
+						}
+					}
+					totalPaths++;
 				}
+
 			}
-			totalPaths++;
+
 		}
 	}
-}
 
 }

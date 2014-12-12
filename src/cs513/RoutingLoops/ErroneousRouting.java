@@ -13,7 +13,7 @@ import cs513.parser.OutputParser;
 
 public class ErroneousRouting {
 	
-	private Map<IPaddress, String> m_errPath = new HashMap<IPaddress, String>();
+	private int m_errPath = 0;
 	
 	private static HashMap<String, IPaddress> m_mapping = new HashMap<String, IPaddress>();
 	static {
@@ -64,31 +64,33 @@ public class ErroneousRouting {
 		return null;
 	}
 	
-	public RoutingPath reversePath(HashMap<String, HashMap<IPaddress, ArrayList<RoutingPath>>> hostmap, RoutingPath path) {
+	public RoutingPath reversePath(HashMap<String, HashMap<String, ArrayList<RoutingPath>>> hostmap, RoutingPath path) {
 		String filename = getKeyByValue(path.getSrcIP()) + ".txt";
-		HashMap<IPaddress, ArrayList<RoutingPath>> pathMap = hostmap.get(filename);
-		ArrayList<RoutingPath> pathList = pathMap.get(path.getSrcIP());
+		HashMap<String, ArrayList<RoutingPath>> pathMap = hostmap.get(filename);
+		ArrayList<RoutingPath> pathList = pathMap.get(path.getSrcIP().ipToString());
 		for (RoutingPath p : pathList) {
 			if (path.within2Hrs(p.getTimestamp())) {
-				return p;
+				if (!p.getSrcIP().equals(p.getDestIP())) {
+					return p;
+				}
 			}
 		}
 		return null;
 	}
 	
-	public void process(HashMap<String, HashMap<IPaddress, ArrayList<RoutingPath>>> hostmap) {
-		for(Map.Entry<String, HashMap<IPaddress, ArrayList<RoutingPath>>> entry : hostmap.entrySet()) {
-			for(Map.Entry<IPaddress, ArrayList<RoutingPath>> e : entry.getValue().entrySet()) {
+	public void process(HashMap<String, HashMap<String, ArrayList<RoutingPath>>> hostmap) {
+		for(Map.Entry<String, HashMap<String, ArrayList<RoutingPath>>> entry : hostmap.entrySet()) {
+			for(Map.Entry<String, ArrayList<RoutingPath>> e : entry.getValue().entrySet()) {
 				ArrayList<RoutingPath> pathList = e.getValue();
 				for (RoutingPath path: pathList) {
 					for(IPaddress ip : path.getPath()) {
 						// if an erroneous path detected, we want to see if this node is reachable by other hosts 
 						if (ip.ipToString().equalsIgnoreCase("0.0.0.0") && path.getPath().size() == 1) {
-							m_errPath.put(path.getSrcIP(), path.getTimestamp());
+							m_errPath++;
 							System.out.println("Found a erroneous Path (srcIp=" + path.getSrcIP() + 
 									" destIp=" + path.getDestIP() + " Timestamp=" + path.getTimestamp() + ")");
 							RoutingPath oppoPath = reversePath(hostmap, path);
-							if (oppoPath.getLastHop().equals(oppoPath.getDestIP())) {
+							if (oppoPath != null && oppoPath.getLastHop().equals(oppoPath.getDestIP())) {
 								System.out.println("But path from opposite direction could reach the destination Path(SrcIP=" + 
 										oppoPath.getSrcIP() + " DestIP=" + oppoPath.getDestIP() + " Timestamp=" + oppoPath.getTimestamp() + ")");
 							} else {
@@ -100,8 +102,7 @@ public class ErroneousRouting {
 				}
 			}
 		}
-
-		
+		System.out.println("Number of Erroneous Path: " + m_errPath);
 	}
 	
 	public static void main(String[] args) {
@@ -117,7 +118,6 @@ public class ErroneousRouting {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Number of Erroneous Path: " + tester.m_errPath);
 	}
 
 }

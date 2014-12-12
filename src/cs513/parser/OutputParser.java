@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,8 +17,8 @@ import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
 
 public class OutputParser {
-	public HashMap<String, ArrayList<RoutingPath>> m_hostmap = new HashMap<String, ArrayList<RoutingPath>>();
-	
+	public HashMap<String, HashMap<String, ArrayList<RoutingPath>>> m_hostmap = new HashMap<String, HashMap<String, ArrayList<RoutingPath>>>();
+
 	private static HashMap<String, IPaddress> m_mapping = new HashMap<String, IPaddress>();
 	static {
 		m_mapping.put("planetlab2.csee.usf.edu", new IPaddress("131.247.2.242"));
@@ -57,15 +58,15 @@ public class OutputParser {
 		m_mapping.put("planetlab2.cs.unc.edu", new IPaddress("204.85.191.11"));
 		m_mapping.put("planetlab-1.scie.uestc.edu.cn", new IPaddress("222.197.180.137"));
 	}
-	
+
 	public Calendar convertToCalendar(String date) {
-		
+
 		String TIMESTAMP_PATTERN = "(?:(\\d{4})-(\\d{2})-(\\d{2})\\.(\\d{2})-(\\d{2})-(\\d{2})?)";
 		Pattern pattern = Pattern.compile(TIMESTAMP_PATTERN);
 		Matcher matcher = pattern.matcher(date);
-		
+
 		Calendar cal = Calendar.getInstance();
-		
+
 		if (matcher.find()) {
 			int year = Integer.parseInt(matcher.group(1));
 			int month = Integer.parseInt(matcher.group(2));
@@ -80,53 +81,53 @@ public class OutputParser {
 			cal.set(Calendar.MINUTE, minute);
 			cal.set(Calendar.SECOND, second);
 		}
-		
+
 		return cal;
 	}
-	
-	
+
+
 	public IPaddress string2IP(String line) {
 		String IPADDRESS_PATTERN = 
-		        "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
-		
+				"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
+
 		String LATENCY_PATTERN = 
 				"(?:[0-9]+.[0-9]+ ms?)";
 
 		Pattern pattern = Pattern.compile(IPADDRESS_PATTERN);
 		Matcher matcher = pattern.matcher(line);
-        if (matcher.find()) {
-        	IPaddress ip = new IPaddress(matcher.group());
-        	Pattern latency = Pattern.compile(LATENCY_PATTERN);
-        	Matcher latencyMatcher = latency.matcher(line);
-        	if (latencyMatcher.find()) {
-        		String latencyString[] = latencyMatcher.group().split(" ");
-        		ip.setLatency(Float.parseFloat(latencyString[0]));
-        	}
-            return ip;
-        }
-        else{
-        	if (line.contains("*")) {
-        		return new IPaddress("*.*.*.*");
-        	}
-            return new IPaddress("0.0.0.0");
-        }
+		if (matcher.find()) {
+			IPaddress ip = new IPaddress(matcher.group());
+			Pattern latency = Pattern.compile(LATENCY_PATTERN);
+			Matcher latencyMatcher = latency.matcher(line);
+			if (latencyMatcher.find()) {
+				String latencyString[] = latencyMatcher.group().split(" ");
+				ip.setLatency(Float.parseFloat(latencyString[0]));
+			}
+			return ip;
+		}
+		else{
+			if (line.contains("*")) {
+				return new IPaddress("*.*.*.*");
+			}
+			return new IPaddress("0.0.0.0");
+		}
 	}
-	
+
 	public void showFiles(File[] files) throws IOException {
 		for (File f : files) {
 			if (f.isDirectory()) {
 				showFiles(f.listFiles());
 			} else {
-				ArrayList<RoutingPath> pathList = generatePath(f);
-				m_hostmap.put(f.getName(), pathList);
-				System.out.println(f.getName() + ": size=" + pathList.size());
+				HashMap<String, ArrayList<RoutingPath>> pathMap = generatePath(f);
+				m_hostmap.put(f.getName(), pathMap);
+				System.out.println(f.getName());
 			}
 		}
 	}
-	
-	public ArrayList<RoutingPath> generatePath(File file) {
 
-		ArrayList<RoutingPath> pathList = new ArrayList<RoutingPath>();
+	public HashMap<String, ArrayList<RoutingPath>> generatePath(File file) {
+
+		HashMap<String, ArrayList<RoutingPath>> pathMap = new HashMap<String, ArrayList<RoutingPath>>();
 		try {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -134,12 +135,21 @@ public class OutputParser {
 			RoutingPath path = null;
 			while ((line = bufferedReader.readLine()) != null) {
 				if (line.startsWith("Dest: ")) {
-					  path = new RoutingPath(m_mapping.get(file.getName().substring(0, file.getName().length() - 4)), string2IP(line)); 
+					IPaddress destIP = string2IP(line);
+					path = new RoutingPath(m_mapping.get(file.getName().substring(0, file.getName().length() - 4)), destIP);
+					if (pathMap.containsKey(destIP.ipToString())) {
+						ArrayList<RoutingPath> pathList = pathMap.get(destIP.ipToString());
+						pathList.add(path);
+					} else {
+						ArrayList<RoutingPath> pathList = new ArrayList<RoutingPath>();
+						pathList.add(path);
+						pathMap.put(destIP.ipToString(), pathList);
+					}
 				} else if (line.startsWith("Timestamp: ")) {
 					String ts[] = line.split(" ");
 					path.setTimestamp((ts[1]));
 				} else if (line.startsWith("####")) { // detect a new line
-					pathList.add(path);
+//					pathList.add(path);
 				} else {
 					path.add(string2IP(line));
 				}
@@ -148,11 +158,11 @@ public class OutputParser {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		return pathList;
+
+		return pathMap;
 	}
 
-	
+
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		File[] files = new File("output_trace_1").listFiles();
@@ -164,6 +174,6 @@ public class OutputParser {
 			e.printStackTrace();
 		}
 		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");
-		
+
 	}	
 }
