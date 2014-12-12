@@ -1,4 +1,4 @@
-package cs513.RoutingLoops;
+package cs513.analysis;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class RoutingLoops {
 		RoutingLoops tester = new RoutingLoops();
 		File[] files = new File("output_trace_1").listFiles();
 
-		long start = System.currentTimeMillis();
+		
 		OutputParser parser = new OutputParser();
 		try {
 			parser.showFiles(files);
@@ -30,18 +30,13 @@ public class RoutingLoops {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");
-		System.out.println("Total Paths: " + tester.totalPaths);
-		System.out.println("Persistent Loops: " + tester.persistentLoops);
-		System.out.println("Temporary Loops: " + tester.tempLoops);
-		System.out.println("Timeouts: " + tester.numTimeouts);
-		System.out.println("Total Loops: " + (tester.persistentLoops + tester.tempLoops));
+		
 
 	}
 
 	public void process(
 			HashMap<String, HashMap<String, ArrayList<RoutingPath>>> m_hostmap) {
-
+		long start = System.currentTimeMillis();
 		for(Map.Entry<String,HashMap<String,ArrayList<RoutingPath>>> entry : m_hostmap.entrySet()) {
 			HashMap<String,ArrayList<RoutingPath>> pathMap = entry.getValue();
 			for(Map.Entry<String,ArrayList<RoutingPath>> e : pathMap.entrySet()) {
@@ -73,8 +68,13 @@ public class RoutingLoops {
 				}
 
 			}
-
 		}
+		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");
+		System.out.println("Total Paths: " + totalPaths);
+		System.out.println("Persistent Loops: " + persistentLoops);
+		System.out.println("Temporary Loops: " + tempLoops);
+		System.out.println("Timeouts: " + numTimeouts);
+		System.out.println("Total Loops: " + (persistentLoops + tempLoops));
 	}
 
 }

@@ -1,8 +1,11 @@
-package cs513.RoutingLoops;
+package cs513.test;
 
 import java.io.File;
 import java.io.IOException;
 
+import cs513.analysis.ErroneousRouting;
+import cs513.analysis.RoutingLoops;
+import cs513.analysis.TooManyHops;
 import cs513.parser.OutputParser;
 
 public class Tester {
