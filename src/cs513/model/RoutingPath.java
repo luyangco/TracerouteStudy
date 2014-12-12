@@ -33,4 +33,9 @@ public class RoutingPath {
 	public void setTimestamp(Calendar m_timestamp) {
 		this.m_timestamp = m_timestamp;
 	}
+	
+	public IPaddress getLastHop() {
+		int size = m_path.size();
+		return m_path.get(size - 1);
+	}
 }

@@ -1,0 +1,29 @@
+--------------------
+Routing Loops
+
+Test1: 
+Durationn: 44 s
+Total Paths: 312991
+Persistent Loops: 7947
+Temporary Loops: 17557
+Timeouts: 28107
+Total Loops: 25504
+
+-------------------------
+Too Many Hops
+
+Test1:
+Duration: 42 s
+Too Many Hops: 28107
+
+We found that a large number of our traceroutes never completed. Possibly behind some sort of firewall.
+With a TTL of 30, many traceroutes never receive an end response from the destination and are unreachable. 
+
+------------------------
+Erroneous Routing
+
+Number of Erroneous Paths: 78
+
+
+
+-------------------------
