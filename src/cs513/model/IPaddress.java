@@ -67,6 +67,15 @@ public class IPaddress {
 		return false;
 	}
 	
+	public boolean equalsLocalNetwork(IPaddress ip) {
+		if (this.getSeg_1().equalsIgnoreCase(ip.getSeg_1()) &&
+				this.getSeg_2().equalsIgnoreCase(ip.getSeg_2()) &&
+				this.getSeg_3().equalsIgnoreCase(ip.getSeg_3())) {
+			return true;
+		}
+		return false;
+	}
+	
 	
 
 }

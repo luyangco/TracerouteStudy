@@ -11,10 +11,13 @@ import java.util.Set;
 import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
 import cs513.parser.OutputParser;
+import cs513.utils.Utils;
 
 public class TooManyHops {
 
 	int tooManyHopsCtr = 0;
+	
+	int [] timeOfDay = new int[24];
 
 	Map<String, Integer> unreachableAddresses =  new HashMap<String, Integer>();
 
@@ -50,6 +53,7 @@ public class TooManyHops {
 							unreachableAddresses.put(dest.ipToString(), 1);
 						}
 						tooManyHopsCtr++;
+						timeOfDay[Utils.convertToLocalTime(path)]++;
 					}
 				}
 			}
@@ -82,6 +86,11 @@ public class TooManyHops {
 		
 		for(String addr : reachableAddresses) {
 			System.out.println("Addr: " + addr);
+		}
+		
+		System.out.println("Time of day pattern");
+		for(int index = 0; index < timeOfDay.length; index++) {
+			System.out.printf("Hour %d: %d\n", index, timeOfDay[index]);
 		}
 
 		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");

@@ -1,0 +1,67 @@
+Total Paths: 9251
+
+Persistent Loops with 1 duplicated hops: 391
+Temporary Loops with 1 duplicated hops: 912
+Persistent Loops with 2 duplicated hops: 6
+Temporary Loops with 2 duplicated hops: 3
+Timeouts: 354
+Total Loops: 1312
+
+
+Time of day pattern
+Hour 0: 30
+Hour 1: 17
+Hour 2: 6
+Hour 3: 11
+Hour 4: 4
+Hour 5: 8
+Hour 6: 35
+Hour 7: 16
+Hour 8: 11
+Hour 9: 14
+Hour 10: 7
+Hour 11: 15
+Hour 12: 46
+Hour 13: 19
+Hour 14: 10
+Hour 15: 18
+Hour 16: 2
+Hour 17: 11
+Hour 18: 24
+Hour 19: 18
+Hour 20: 9
+Hour 21: 11
+Hour 22: 3
+Hour 23: 9
+
+
+Too Many Hops: 354
+
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-00-26)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-01-46)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-05-40)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-59-46)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-54-25)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-01-06)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-55-45)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-53-45)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-59-06)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-53-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-55-05)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.11-58-26)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.12-02-01)
+Path from opposite direction also can't reach the destination within 2 hrs
+
+Number of Erroneous Path: 13

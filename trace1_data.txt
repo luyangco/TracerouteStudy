@@ -181,7 +181,37 @@ Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=204.123.28.57 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.09-03-17)
 Path from opposite direction also can't reach the destination within 2 hrs
 
-
+The total number of paths is: 322051
+The number of symmetric paths with 0 is: 483
+The number of symmetric paths with 1 is: 7005
+The number of symmetric paths with 2 is: 1
+The number of symmetric paths with 3 is: 216
+The number of symmetric paths with 4 is: 253
+The number of symmetric paths with 5 is: 2522
+The number of symmetric paths with 6 is: 5698
+The number of symmetric paths with 7 is: 10431
+The number of symmetric paths with 8 is: 17012
+The number of symmetric paths with 9 is: 18575
+The number of symmetric paths with 10 is: 17918
+The number of symmetric paths with 11 is: 13623
+The number of symmetric paths with 12 is: 10517
+The number of symmetric paths with 13 is: 9143
+The number of symmetric paths with 14 is: 5086
+The number of symmetric paths with 15 is: 1791
+The number of symmetric paths with 16 is: 613
+The number of symmetric paths with 17 is: 433
+The number of symmetric paths with 18 is: 8
+The number of symmetric paths with 19 is: 4
+The number of symmetric paths with 20 is: 0
+The number of symmetric paths with 21 is: 2
+The number of symmetric paths with 22 is: 1
+The number of symmetric paths with 23 is: 0
+The number of symmetric paths with 24 is: 0
+The number of symmetric paths with 25 is: 0
+The number of symmetric paths with 26 is: 0
+The number of symmetric paths with 27 is: 0
+The number of symmetric paths with 28 is: 0
+The number of symmetric paths with 29 is: 0
 
 
 -------------------------

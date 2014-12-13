@@ -161,7 +161,7 @@ public class Parser {
 	
 	
 	public static void main(String[] args) {
-		File[] files = new File("c:\\Program Files (x86)\\cygwin64\\home\\ylu5\\output\\trace_1\\").listFiles();
+		File[] files = new File("c:\\Program Files (x86)\\cygwin64\\home\\ylu5\\output\\trace_1").listFiles();
 		try {
 			showFiles(files, null);
 		} catch (IOException e) {
