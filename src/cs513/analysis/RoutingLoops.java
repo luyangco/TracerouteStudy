@@ -62,9 +62,11 @@ public class RoutingLoops {
 									if(lasthop.ipToString().equalsIgnoreCase(path.getDestIP().ipToString())) {
 										tempLoops[1]++;
 										tempLoops[0]--;
+										System.out.println("Temp Src:" + path.getSrcIP() + " Dest:" + path.getDestIP() + " Timestamp:" + path.getTimestamp());
 									} else { // never reaches dest
 										persistentLoops[1]++;
 										persistentLoops[0]--;
+										System.out.println("Persis Src:" + path.getSrcIP() + " Dest:" + path.getDestIP() + " Timestamp:" + path.getTimestamp());
 									}
 								} else if (uniqueIPs.get(ip.ipToString()) == 2) { // has two duplicate hops
 									if(lasthop.ipToString().equalsIgnoreCase(path.getDestIP().ipToString())) {
@@ -86,8 +88,8 @@ public class RoutingLoops {
 		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");
 		System.out.println("Total Paths: " + totalPaths);
 		for (int i = 0; i < 2; i++) {
-			System.out.printf("Persistent Loops with %d duplicated hops: %d\n", i + 1, persistentLoops[i]);
-			System.out.printf("Temporary Loops with %d duplicated hops: %d\n", i + 1, tempLoops[i]);
+			System.out.printf("Persistent Loops with %d duplicated hops: %d\n", i + 2, persistentLoops[i]);
+			System.out.printf("Temporary Loops with %d duplicated hops: %d\n", i + 2, tempLoops[i]);
 		}
 		System.out.println("Timeouts: " + numTimeouts);
 		System.out.println("Total Loops: " + (persistentLoops[0] + tempLoops[0] + persistentLoops[1] + tempLoops[1]));

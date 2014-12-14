@@ -86,11 +86,8 @@ public class Parser {
 		for (File f : files) {
 			if (f.isDirectory()) {
 				FileWriter fstream = null;
-				BufferedWriter out = null;
-				if (!f.getName().equalsIgnoreCase("trace_1")) {
-					fstream = new FileWriter(f.getName()+".txt");
-					out = new BufferedWriter(fstream);
-				}
+				fstream = new FileWriter(f.getName()+".txt");
+				BufferedWriter out = new BufferedWriter(fstream);
 				long startTime = System.currentTimeMillis();
 				System.out.println("Directory: " + f.getName());
 				showFiles(f.listFiles(), out);
