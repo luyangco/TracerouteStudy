@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
 
-public class Parser {
+public class TracerouteLogParser {
 	
 	private static HashMap<String, IPaddress> m_mapping = new HashMap<String, IPaddress>();
 	static {
@@ -82,7 +82,7 @@ public class Parser {
         }
 	}
 	
-	public static void showFiles(File[] files, BufferedWriter bw) throws IOException {
+	public static void processFiles(File[] files, BufferedWriter bw) throws IOException {
 		for (File f : files) {
 			if (f.isDirectory()) {
 				FileWriter fstream = null;
@@ -90,7 +90,7 @@ public class Parser {
 				BufferedWriter out = new BufferedWriter(fstream);
 				long startTime = System.currentTimeMillis();
 				System.out.println("Directory: " + f.getName());
-				showFiles(f.listFiles(), out);
+				processFiles(f.listFiles(), out);
 				out.close();
 				long endTime = System.currentTimeMillis();
 				System.out.println("enduration: " + (endTime - startTime) / 1000 + " s");
@@ -158,9 +158,9 @@ public class Parser {
 	
 	
 	public static void main(String[] args) {
-		File[] files = new File("c:\\Program Files (x86)\\cygwin64\\home\\ylu5\\output\\trace_1").listFiles();
+		File[] files = new File("trace_1").listFiles();
 		try {
-			showFiles(files, null);
+			processFiles(files, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -37,6 +37,10 @@ public class IPaddress {
 	public String getSeg_4() {
 		return seg_4;
 	}
+	
+	public void setSeg_4(String value) {
+		seg_4 = value;
+	}
 
 	public float getLatency() {
 		return latency;

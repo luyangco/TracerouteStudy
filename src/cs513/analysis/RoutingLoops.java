@@ -62,11 +62,13 @@ public class RoutingLoops {
 									if(lasthop.ipToString().equalsIgnoreCase(path.getDestIP().ipToString())) {
 										tempLoops[1]++;
 										tempLoops[0]--;
-										System.out.println("Temp Src:" + path.getSrcIP() + " Dest:" + path.getDestIP() + " Timestamp:" + path.getTimestamp());
+										System.out.println("Temp Src:" + path.getSrcIP() + "  Dest:" + path.getDestIP() + "  Timestamp:" + path.getTimestamp() +
+												"  Duplicate hop: " + ip.ipToString());
 									} else { // never reaches dest
 										persistentLoops[1]++;
 										persistentLoops[0]--;
-										System.out.println("Persis Src:" + path.getSrcIP() + " Dest:" + path.getDestIP() + " Timestamp:" + path.getTimestamp());
+										System.out.println("Persis Src:" + path.getSrcIP() + "  Dest:" + path.getDestIP() + "  Timestamp:" + path.getTimestamp()
+												+ "  Duplicate hop: " + ip.ipToString());
 									}
 								} else if (uniqueIPs.get(ip.ipToString()) == 2) { // has two duplicate hops
 									if(lasthop.ipToString().equalsIgnoreCase(path.getDestIP().ipToString())) {

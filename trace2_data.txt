@@ -47,6 +47,72 @@ Hour 22: 3
 Hour 23: 9
 Duration: 0 s
 Too Many Hops: 354
+
+
+Temporary Outage
+--------------------
+
+Time of day pattern
+Hour  0: 129
+Hour  1: 217
+Hour  2: 94
+Hour  3: 95
+Hour  4: 124
+Hour  5: 84
+Hour  6: 156
+Hour  7: 203
+Hour  8: 118
+Hour  9: 132
+Hour 10: 129
+Hour 11: 109
+Hour 12: 294
+Hour 13: 253
+Hour 14: 131
+Hour 15: 163
+Hour 16: 118
+Hour 17: 72
+Hour 18: 105
+Hour 19: 213
+Hour 20: 128
+Hour 21: 115
+Hour 22: 120
+Hour 23: 83
+Outage Mapping
+Number of outage  0: 5302      57.3% zero loss
+Number of outage  1: 2166      36.5% between 1 to 5 losses
+Number of outage  2: 794
+Number of outage  3: 284
+Number of outage  4: 69
+Number of outage  5: 64
+Number of outage  6: 6         6.2% more than 6 losses
+Number of outage  7: 0
+Number of outage  8: 0
+Number of outage  9: 0
+Number of outage 10: 2
+Number of outage 11: 0
+Number of outage 12: 0
+Number of outage 13: 0
+Number of outage 14: 0
+Number of outage 15: 0
+Number of outage 16: 0
+Number of outage 17: 0
+Number of outage 18: 0
+Number of outage 19: 0
+Number of outage 20: 0
+Number of outage 21: 0
+Number of outage 22: 0
+Number of outage 23: 0
+Number of outage 24: 0
+Number of outage 25: 0
+Number of outage 26: 0
+Number of outage 27: 0
+Number of outage 28: 0
+Number of outage 29: 0
+
+------------
+
+
+
 Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-00-26)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.12-01-46)
@@ -74,3 +140,38 @@ Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.12-02-01)
 Path from opposite direction also can't reach the destination within 2 hrs
 Number of Erroneous Path: 13
+
+-----
+Routing Symmetry
+
+The total number of paths is: 9251
+The number of symmetric paths with 0 is: 6
+The number of symmetric paths with 1 is: 102
+The number of symmetric paths with 2 is: 1032
+The number of symmetric paths with 3 is: 815
+The number of symmetric paths with 4 is: 322
+The number of symmetric paths with 5 is: 261
+The number of symmetric paths with 6 is: 320
+The number of symmetric paths with 7 is: 252
+The number of symmetric paths with 8 is: 193
+The number of symmetric paths with 9 is: 128
+The number of symmetric paths with 10 is: 81
+The number of symmetric paths with 11 is: 28
+The number of symmetric paths with 12 is: 3
+The number of symmetric paths with 13 is: 1
+The number of symmetric paths with 14 is: 0
+The number of symmetric paths with 15 is: 0
+The number of symmetric paths with 16 is: 0
+The number of symmetric paths with 17 is: 0
+The number of symmetric paths with 18 is: 0
+The number of symmetric paths with 19 is: 0
+The number of symmetric paths with 20 is: 0
+The number of symmetric paths with 21 is: 0
+The number of symmetric paths with 22 is: 0
+The number of symmetric paths with 23 is: 0
+The number of symmetric paths with 24 is: 0
+The number of symmetric paths with 25 is: 0
+The number of symmetric paths with 26 is: 0
+The number of symmetric paths with 27 is: 0
+The number of symmetric paths with 28 is: 0
+The number of symmetric paths with 29 is: 0

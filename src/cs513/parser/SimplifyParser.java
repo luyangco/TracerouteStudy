@@ -33,6 +33,7 @@ public class SimplifyParser extends OutputParser {
 						pathList.add(path);
 						pathMap.put(destIP.ipToString(), pathList);
 					}
+					path.add(path.getSrcIP()); // src ip will be the first hop of path
 				} else if (line.startsWith("Timestamp: ")) {
 					String ts[] = line.split(" ");
 					path.setTimestamp((ts[1]));
@@ -44,6 +45,7 @@ public class SimplifyParser extends OutputParser {
 					if (hop.equals(new IPaddress("*.*.*.*"))) {
 						continue;
 					}
+					hop.setSeg_4("0");
 					if (path.getPath().isEmpty()) {
 						path.add(hop);
 					} else if (!path.getLastHop().equalsLocalNetwork(hop)) {

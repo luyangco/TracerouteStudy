@@ -1,33 +1,324 @@
 --------------------
 Routing Loops
+--------------------
 
-Test1: 
-Duration: 24 s
-Total Paths: 321567
-Persistent Loops: 7922
-Temporary Loops: 17483
-Timeouts: 28088
-Total Loops: 25405
+Temporary Loops:
+
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-15.06-13-03  Duplicate hop: 188.1.234.38     AS680
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-13.18-26-17  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-15.19-22-56  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-16.12-08-22  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-16.20-30-13  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-18.08-46-48  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-19.15-38-33  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-20.19-40-16  Duplicate hop: 188.1.234.38
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-23.14-47-37  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-25.14-16-28  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-25.22-39-15  Duplicate hop: 188.1.234.38
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-28.09-21-14  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-28.17-43-32  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.10-29-48  Duplicate hop: 188.1.234.38
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.21-41-34  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.15-32-36  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-03.20-47-06  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.23-22-35  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-06.13-26-10  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-12.15-55-55  Duplicate hop: 188.1.145.102
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-07.06-20-25  Duplicate hop: 188.1.145.97
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-12.07-27-30  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-16.02-47-34  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-18.16-39-06  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-19.05-02-20  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-21.12-44-46  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-22.09-22-55  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-23.06-01-01  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-27.07-00-54  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-27.13-11-49  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.08-29-45  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.16-44-58  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.20-22-31  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-02.08-47-16  Duplicate hop: 188.1.234.38
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-02.19-08-23  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-03.07-34-14  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-03.11-43-29  Duplicate hop: 188.1.234.38
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.15-31-29  Duplicate hop: 188.1.234.38
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-07.02-41-33  Duplicate hop: 188.1.234.38
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-08.15-59-41  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-13.05-55-14  Duplicate hop: 188.1.145.97
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-13.14-07-57  Duplicate hop: 188.1.145.102
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-18.10-27-37  Duplicate hop: 134.96.6.28       
+Temp Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-10.03-14-58  Duplicate hop: 134.96.6.28
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.18-20-45  Duplicate hop: 134.96.6.28
+Temp Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-02.16-46-20  Duplicate hop: 134.96.6.28
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:157.92.44.104 ( 0.0ms )  Timestamp:2014-12-09.09-08-23  Duplicate hop: 190.220.179.70    AS11664
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:157.92.44.104 ( 0.0ms )  Timestamp:2014-12-09.11-12-08  Duplicate hop: 63.65.188.142     AS701
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-15.10-18-14  Duplicate hop: 154.54.11.130     AS174
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-19.19-19-45  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-06.16-38-27  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-03.05-29-46  Duplicate hop: 154.54.40.73
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-08.12-16-15  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-08.16-26-37  Duplicate hop: 154.54.6.169
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-09.17-23-50  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-05.11-31-33  Duplicate hop: 154.54.5.233
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-17.01-27-42  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-12.22-15-31  Duplicate hop: 154.54.11.130
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-17.05-34-56  Duplicate hop: 205.171.139.66   AS209
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-06.10-24-14  Duplicate hop: 205.171.139.66
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-11.00-31-27  Duplicate hop: 205.171.139.66
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-07.09-14-54  Duplicate hop: 65.117.112.102
+Temp Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-11.10-53-00  Duplicate hop: 199.218.20.25   AS600
+Temp Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-11-16.17-46-39  Duplicate hop: 4.69.152.203    AS3356
+Temp Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-11-19.10-23-15  Duplicate hop: 4.69.152.11
+Temp Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-11-26.17-30-33  Duplicate hop: 4.69.152.11
+Temp Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-12-01.02-49-26  Duplicate hop: 4.69.152.139
+Temp Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-12-12.03-09-27  Duplicate hop: 4.69.152.139
+
+Persistent Loops:
+
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-17.16-01-11  Duplicate hop: 188.1.234.38      AS680
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-18.05-59-10  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-20.08-28-08  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-22.13-37-47  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-22.19-13-32  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-26.01-27-43  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-27.13-46-15  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-28.20-31-35  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.04-23-06  Duplicate hop: 188.1.234.38
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.23-56-58  Duplicate hop: 188.1.234.38
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-02.11-08-38  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-04.05-08-51  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.06-22-12  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-09.17-28-44  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-09.20-17-36  Duplicate hop: 188.1.145.97
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-11.03-15-52  Duplicate hop: 188.1.234.38
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-11.14-30-46  Duplicate hop: 188.1.145.102
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-11.22-58-35  Duplicate hop: 188.1.234.38
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-06.10-37-02  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.20-52-19  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-30.11-19-12  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-30.13-22-57  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.05-54-01  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-03.03-25-40  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-06.01-52-05  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-07.06-50-20  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-09.00-17-24  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-09.10-38-33  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-09.18-57-59  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-10.09-28-04  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-12.07-10-46  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-14.21-59-50  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-15.04-09-43  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-15.18-33-24  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-17.05-35-43  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-19.11-13-53  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-20.01-41-07  Duplicate hop: 188.1.234.38
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-20.22-18-50  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-21.00-22-31  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-21.23-03-26  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-23.14-15-37  Duplicate hop: 188.1.145.102
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-26.06-16-03  Duplicate hop: 188.1.145.97
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-13.07-58-19  Duplicate hop: 188.1.234.38
+Persis Src:198.82.160.238 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-26.06-55-45  Duplicate hop: 188.1.234.38
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-16.17-41-59  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-19.18-27-20  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-21.18-01-07  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-25.03-06-12  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-01.07-10-47  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-02.08-20-48  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-03.03-59-12  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-04.10-45-11  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.12-01-57  Duplicate hop: 134.96.6.28
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-10.01-54-11  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.07-13-08  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.09-17-30  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-07.21-20-55  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-12.15-29-08  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-23.12-11-58  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-24.17-04-18  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-25.03-23-29  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-25.09-34-42  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-11-29.04-22-01  Duplicate hop: 134.96.6.28
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-04.08-25-51  Duplicate hop: 139.19.0.139
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-05.17-35-47  Duplicate hop: 139.19.0.139
+Persis Src:137.148.16.10 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-13.10-01-57  Duplicate hop: 139.19.0.139
+Persis Src:129.110.125.51 ( 0.0ms )  Dest:139.19.158.225 ( 0.0ms )  Timestamp:2014-12-06.10-37-02  Duplicate hop: 139.19.0.139
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-26.21-43-03  Duplicate hop: 130.107.32.10    unknown
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.03-52-35  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.16-11-16  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.08-05-11  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.10-08-07  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.12-11-06  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-25.04-37-11  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.14-47-36  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.23-02-58  Duplicate hop: 130.107.32.10
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-04.06-57-08  Duplicate hop: 130.107.32.10
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-15.10-30-52  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-23.22-15-23  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.02-22-40  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.10-37-01  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-25.07-11-59  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-26.16-09-38  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.02-28-14  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.12-43-50  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.23-02-14  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-02.08-40-50  Duplicate hop: 130.107.32.10
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-02.14-56-08  Duplicate hop: 130.107.32.10
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-26.11-26-08  Duplicate hop: 12.122.18.21     AS7018
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-18.16-36-22  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-19.09-03-24  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-20.07-40-09  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-22.19-25-37  Duplicate hop: 12.122.86.198
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-23.09-51-24  Duplicate hop: 12.122.86.198
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-24.06-30-34  Duplicate hop: 12.122.86.198
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.04-30-50  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.17-32-59  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-30.08-59-18  Duplicate hop: 12.122.86.198
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-30.23-37-08  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-01.14-05-04  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-01.22-21-10  Duplicate hop: 12.122.86.198
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-02.02-29-04  Duplicate hop: 12.122.86.198
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.04-32-07  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-19.23-27-30  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-20.17-58-13  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-22.15-18-10  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-26.03-49-25  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-26.22-21-23  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-27.00-24-43  Duplicate hop: 12.249.226.126
+Persis Src:195.113.161.84 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.20-59-18  Duplicate hop: 12.122.110.37
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-28.21-41-13  Duplicate hop: 12.249.226.126
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-29.16-14-30  Duplicate hop: 12.249.226.126
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-11-23.16-35-22  Duplicate hop: 4.69.152.75       AS3356
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-12-03.14-03-40  Duplicate hop: 4.69.152.75
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-12-07.00-49-09  Duplicate hop: 4.69.152.11
+Persis Src:140.247.60.126 ( 0.0ms )  Dest:204.123.28.57 ( 0.0ms )  Timestamp:2014-12-09.20-10-59  Duplicate hop: 4.69.152.203
+Persis Src:139.80.206.132 ( 0.0ms )  Dest:128.163.142.20 ( 0.0ms )  Timestamp:2014-11-21.10-56-03  Duplicate hop: 128.163.110.68    AS10437
+Persis Src:139.80.206.132 ( 0.0ms )  Dest:128.163.142.20 ( 0.0ms )  Timestamp:2014-11-21.10-56-03  Duplicate hop: 128.163.110.67
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-10.09-59-33  Duplicate hop: 154.54.11.130      AS174
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-11-29.16-14-30  Duplicate hop: 154.54.11.46
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:192.12.33.102 ( 0.0ms )  Timestamp:2014-12-01.12-00-40  Duplicate hop: 154.54.11.46
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-16.06-52-34  Duplicate hop: 154.54.11.130
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-18.06-18-18  Duplicate hop: 154.54.11.130
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-09.02-52-16  Duplicate hop: 154.54.11.130
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-15.12-21-36  Duplicate hop: 205.171.139.66    AS209
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-10.16-12-32  Duplicate hop: 205.171.139.66   
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-16.02-46-28  Duplicate hop: 65.117.112.102
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-17.22-04-42  Duplicate hop: 65.117.112.102
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-08.18-32-34  Duplicate hop: 65.117.112.102
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-17.07-38-16  Duplicate hop: 205.171.139.66
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-02.12-50-37  Duplicate hop: 205.171.139.66
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-06.02-07-02  Duplicate hop: 205.171.139.66
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-11-17.11-46-01  Duplicate hop: 199.18.156.94     AS600
+Persis Src:139.19.158.225 ( 0.0ms )  Dest:137.148.16.10 ( 0.0ms )  Timestamp:2014-12-03.03-24-33  Duplicate hop: 199.18.156.94
+
+Duration: 1 s
+Total Paths: 231699
+Persistent Loops with 2 duplicated hops: 8860
+Temporary Loops with 2 duplicated hops: 21335
+
+Persistent Loops with 3 duplicated hops: 134
+
+Temporary Loops with 3 duplicated hops: 68
+
+Timeouts: 8595
+Total Loops: 30397
 
 -------------------------
-Too Many Hops
+Timeouts: 8595
+Too Many Hops: 8595
 
-Test1:
-Duration: 42 s
-Too Many Hops: 28088
+Time of day pattern
+Hour 0: 354
+Hour 1: 358
+Hour 2: 362
+Hour 3: 363
+Hour 4: 359
+Hour 5: 348
+Hour 6: 357
+Hour 7: 344
+Hour 8: 356
+Hour 9: 350
+Hour 10: 353
+Hour 11: 353
+Hour 12: 366
+Hour 13: 352
+Hour 14: 372
+Hour 15: 352
+Hour 16: 349
+Hour 17: 371
+Hour 18: 358
+Hour 19: 375
+Hour 20: 352
+Hour 21: 368
+Hour 22: 362
+Hour 23: 361
 
 We found that a large number of our traceroutes never completed. Possibly behind some sort of firewall.
 With a TTL of 30, many traceroutes never receive an end response from the destination and are unreachable. 
 
+
+-----------------------
+Temporary outage
+
+Time of day pattern
+Hour  0: 3435
+Hour  1: 3365
+Hour  2: 3323
+Hour  3: 3384
+Hour  4: 3365
+Hour  5: 3326
+Hour  6: 3301
+Hour  7: 3441
+Hour  8: 3299
+Hour  9: 3393
+Hour 10: 3469
+Hour 11: 3466
+Hour 12: 3651
+Hour 13: 3487
+Hour 14: 3599
+Hour 15: 3584
+Hour 16: 3568
+Hour 17: 3521
+Hour 18: 3498
+Hour 19: 3562
+Hour 20: 3433
+Hour 21: 3470
+Hour 22: 3465
+Hour 23: 3434
+Outage Mapping
+Number of outage  0: 135744     58.6% zero loss
+Number of outage  1: 55788      35.7% between 1 to 5 losses
+Number of outage  2: 18808
+Number of outage  3: 6670
+Number of outage  4: 1016
+Number of outage  5: 467
+Number of outage  6: 61         5.7% more than 6 losses
+Number of outage  7: 4
+Number of outage  8: 0
+Number of outage  9: 1
+Number of outage 10: 15
+Number of outage 11: 2
+Number of outage 12: 0
+Number of outage 13: 0
+Number of outage 14: 0
+Number of outage 15: 2
+Number of outage 16: 3
+Number of outage 17: 0
+Number of outage 18: 0
+Number of outage 19: 0
+Number of outage 20: 0
+Number of outage 21: 1
+Number of outage 22: 0
+Number of outage 23: 0
+Number of outage 24: 0
+Number of outage 25: 0
+Number of outage 26: 1
+Number of outage 27: 0
+Number of outage 28: 0
+Number of outage 29: 0
+
 ------------------------
-Erroneous Routing
+Infrastructure failure
 
-Number of Erroneous Paths: 78
-
-Found a erroneous Path (srcIp=130.127.39.152 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-16.20-56-38)
-Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=130.253.21.121 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.00-00-05)
-Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=130.253.21.121 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.10-11-29)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=139.78.141.245 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.04-19-58)
@@ -39,6 +330,8 @@ Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-26.02-05-53)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-22.07-18-52)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=137.148.16.10 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-11.18-37-47)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=157.92.44.104 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.18-45-41)
 Path from opposite direction also can't reach the destination within 2 hrs
@@ -54,25 +347,57 @@ Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Ti
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=192.33.90.68 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-09.16-59-28)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=129.110.125.51 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.20-23-41)
-Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=195.113.161.84 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.16-13-59)
-Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=133.69.32.133 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-22.12-20-12)
-Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=133.69.32.133 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.20-10-24)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=131.247.2.242 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-23.04-28-29)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=128.227.150.11 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-18.16-30-33)
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-37-02)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=198.83.85.46 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-15.00-00-33)
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-42-42)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.18-32-43)
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-48-00)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-20.16-05-57)
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-26-43)
 Path from opposite direction also can't reach the destination within 2 hrs
-Found a erroneous Path (srcIp=222.197.180.137 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-01.13-44-15)
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-42-12)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-27-48)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-26-03)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-41-32)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-39-27)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-40-52)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.17-55-33)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.17-54-47)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-17-34)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-10-06)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-06-41)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-10-46)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-19-30)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-38-22)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-49-25)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-18-50)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-48-45)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.18-18-19)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-37-42)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=130.194.252.8 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.15-30-49)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=206.117.37.4 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-03.09-03-16)
 Path from opposite direction also can't reach the destination within 2 hrs
@@ -168,6 +493,10 @@ Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) T
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-07.15-50-30)
 Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-11.03-38-54)
+Path from opposite direction also can't reach the destination within 2 hrs
+Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-12.08-17-00)
+Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.06-39-18)
 Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=128.42.142.41 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-11-28.05-21-47)
@@ -181,30 +510,36 @@ Path from opposite direction also can't reach the destination within 2 hrs
 Found a erroneous Path (srcIp=204.123.28.57 ( 0.0ms ) destIp=0.0.0.0 ( 0.0ms ) Timestamp=2014-12-05.09-03-17)
 Path from opposite direction also can't reach the destination within 2 hrs
 
-The total number of paths is: 322051
-The number of symmetric paths with 0 is: 483
-The number of symmetric paths with 1 is: 7005
-The number of symmetric paths with 2 is: 1
-The number of symmetric paths with 3 is: 216
-The number of symmetric paths with 4 is: 253
-The number of symmetric paths with 5 is: 2522
-The number of symmetric paths with 6 is: 5698
-The number of symmetric paths with 7 is: 10431
-The number of symmetric paths with 8 is: 17012
-The number of symmetric paths with 9 is: 18575
-The number of symmetric paths with 10 is: 17918
-The number of symmetric paths with 11 is: 13623
-The number of symmetric paths with 12 is: 10517
-The number of symmetric paths with 13 is: 9143
-The number of symmetric paths with 14 is: 5086
-The number of symmetric paths with 15 is: 1791
-The number of symmetric paths with 16 is: 613
-The number of symmetric paths with 17 is: 433
-The number of symmetric paths with 18 is: 8
-The number of symmetric paths with 19 is: 4
+Number of Erroneous Path: 95
+
+-----
+Routing Symmetry
+
+
+The total number of paths is: 231699
+The number of symmetric paths with 0 is: 165
+The number of symmetric paths with 1 is: 2675
+The number of symmetric paths with 2 is: 30713
+The number of symmetric paths with 3 is: 25316
+The number of symmetric paths with 4 is: 11098
+The number of symmetric paths with 5 is: 8898
+The number of symmetric paths with 6 is: 10311
+The number of symmetric paths with 7 is: 7656
+The number of symmetric paths with 8 is: 5372
+The number of symmetric paths with 9 is: 3503
+The number of symmetric paths with 10 is: 2043
+The number of symmetric paths with 11 is: 586
+The number of symmetric paths with 12 is: 28
+The number of symmetric paths with 13 is: 2
+The number of symmetric paths with 14 is: 1
+The number of symmetric paths with 15 is: 0
+The number of symmetric paths with 16 is: 0
+The number of symmetric paths with 17 is: 0
+The number of symmetric paths with 18 is: 0
+The number of symmetric paths with 19 is: 0
 The number of symmetric paths with 20 is: 0
-The number of symmetric paths with 21 is: 2
-The number of symmetric paths with 22 is: 1
+The number of symmetric paths with 21 is: 0
+The number of symmetric paths with 22 is: 0
 The number of symmetric paths with 23 is: 0
 The number of symmetric paths with 24 is: 0
 The number of symmetric paths with 25 is: 0
@@ -212,6 +547,3 @@ The number of symmetric paths with 26 is: 0
 The number of symmetric paths with 27 is: 0
 The number of symmetric paths with 28 is: 0
 The number of symmetric paths with 29 is: 0
-
-
--------------------------
