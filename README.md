@@ -1,5 +1,7 @@
-TracerouteStudy: by Adam Chaulk and Yang Lu
+TracerouteStudy
 ===========================================
+By Adam Chaulk and Yang Lu.
+
 1. Dataset can be downloaded at https://drive.google.com/file/d/0B72b757Dv5s5dkJtUmhDNlVuSEk/view?usp=sharing
 2. Unzip the dataset to the project folder.
 
