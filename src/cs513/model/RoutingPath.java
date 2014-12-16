@@ -64,14 +64,6 @@ public class RoutingPath {
 			currentDateBefore1Hr.setTime(currDate);
 			currentDateBefore1Hr.add(Calendar.HOUR, -1);
 
-			/*************** verbose ***********************/
-//			System.out.println("currentDateAfter1Hr : "
-//					+ currentDateAfter1Hr.getTime());
-//			System.out.println("currentDateBefore1Hr : "
-//					+ currentDateBefore1Hr.getTime());
-//			System.out.println("dateToValidate : " + timestamp);
-			/************************************************/
-
 			if (date.before(currentDateAfter1Hr.getTime())
 					&& date.after(currentDateBefore1Hr.getTime())) {
 
@@ -84,7 +76,6 @@ public class RoutingPath {
 
 			}
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
@@ -93,13 +84,5 @@ public class RoutingPath {
 	public IPaddress getLastHop() {
 		int size = m_path.size();
 		return m_path.get(size - 1);
-	}
-	
-	// test
-	public static void main(String[] args) {
-		RoutingPath rp = new RoutingPath(new IPaddress("138.0.2.1"), new IPaddress("123.231.23.2"));
-		rp.setTimestamp("2014-11-16.20-56-38");
-		
-		System.out.println("Return " + rp.within2Hrs("2014-11-13.17-57-00"));
 	}
 }

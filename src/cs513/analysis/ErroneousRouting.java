@@ -1,15 +1,11 @@
 package cs513.analysis;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
-import cs513.parser.OutputParser;
 import cs513.utils.Utils;
 
 public class ErroneousRouting {
@@ -42,21 +38,6 @@ public class ErroneousRouting {
 			}
 		}
 		System.out.println("Number of Erroneous Path: " + m_errPath);
-	}
-	
-	public static void main(String[] args) {
-
-		ErroneousRouting tester = new ErroneousRouting();
-		File[] files = new File("output_trace_1").listFiles();
-
-		OutputParser parser = new OutputParser();
-		try {
-			parser.showFiles(files);
-			tester.process(parser.m_hostmap);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
 	}
 
 }

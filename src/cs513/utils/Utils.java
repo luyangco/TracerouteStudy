@@ -160,17 +160,8 @@ public class Utils {
 			
 			return localDate.get(Calendar.HOUR_OF_DAY);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return -1;
 		}
-	}
-	
-	
-	// test
-	public static void main(String[] args) {
-		RoutingPath path = new RoutingPath(new IPaddress("128.163.142.20"), new IPaddress("129.110.125.51"));
-		path.setTimestamp("2014-12-13.00-00-00");
-		System.out.println(convertToLocalTime(path));
 	}
 }

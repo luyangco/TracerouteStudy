@@ -4,14 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
-import cs513.parser.OutputParser;
 import cs513.parser.SimplifyParser;
 import cs513.utils.Utils;
 
@@ -20,6 +17,7 @@ public class RoutingSymmetry {
 	private int[] symmetricPath = new int[30];
 	private int totalPath = 0;
 	
+	// Select the dataset to be analysed, either "trace_1" or "trace_2"
 	private static final String DATASET = "trace_1";
 
 	public void process(HashMap<String, HashMap<String, ArrayList<RoutingPath>>> hostmap) {
@@ -33,8 +31,6 @@ public class RoutingSymmetry {
 						// if two paths are exactly the same
 						ArrayList<IPaddress> reverseHops = reversePath.getPath();
 						ArrayList<IPaddress> hops = path.getPath();
-						int endHop = reverseHops.size() - 1;
-						boolean isPathSymmtric = true;
 						
 						List<IPaddress> common = new ArrayList<IPaddress>(reverseHops);
 						common.retainAll(hops);
@@ -43,25 +39,6 @@ public class RoutingSymmetry {
 							System.out.println("");
 						}
 						symmetricPath[diffNum]++;
-						
-						
-//						if ( reverseHops.size() == hops.size()) {
-//							for (int i = 0; i < reverseHops.size(); i++) {
-//								if (!reverseHops.get(endHop - i).equalsLocalNetwork(hops.get(i))) {
-//									isPathSymmtric = false;
-//									break;
-//								}
-//							}
-//							if (isPathSymmtric) {
-//								symmetricPath[0]++;
-//							}
-//						} else if ( Math.abs(reverseHops.size() - hops.size()) == 1) { // One hop difference
-//							List<IPaddress> common = new ArrayList<IPaddress>(reverseHops);
-//							common.retainAll(hops);
-//							if (common.size() == Math.min(reverseHops.size(), hops.size()) - 1) {
-//								symmetricPath[1]++;
-//							}
-//						}
 					}
 				}
 			}
@@ -82,7 +59,7 @@ public class RoutingSymmetry {
 
 		SimplifyParser parser = new SimplifyParser();
 		try {
-			parser.showFiles(files);
+			parser.generateOuput(files);
 			routSym.process(parser.m_hostmap);
 		} catch (IOException e) {
 			e.printStackTrace();

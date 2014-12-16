@@ -1,15 +1,12 @@
 package cs513.parser;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -74,10 +71,10 @@ public class OutputParser {
 		}
 	}
 
-	public void showFiles(File[] files) throws IOException {
+	public void generateOuput(File[] files) throws IOException {
 		for (File f : files) {
 			if (f.isDirectory()) {
-				showFiles(f.listFiles());
+				generateOuput(f.listFiles());
 			} else {
 				HashMap<String, ArrayList<RoutingPath>> pathMap = generatePath(f);
 				m_hostmap.put(f.getName(), pathMap);
@@ -110,7 +107,7 @@ public class OutputParser {
 					String ts[] = line.split(" ");
 					path.setTimestamp((ts[1]));
 				} else if (line.startsWith("####")) { // detect a new line
-//					pathList.add(path);
+					; // nothing to do here
 				} else {
 					path.add(string2IP(line));
 				}
@@ -122,19 +119,4 @@ public class OutputParser {
 
 		return pathMap;
 	}
-
-
-	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-		File[] files = new File("output_trace_1").listFiles();
-		OutputParser parser = new OutputParser();
-		try {
-			parser.showFiles(files);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("Duration: " + ((System.currentTimeMillis() - start) / 1000) + " s");
-
-	}	
 }

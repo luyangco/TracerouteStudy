@@ -29,7 +29,7 @@ public class TooManyHops {
 		
 		OutputParser parser = new OutputParser();
 		try {
-			parser.showFiles(files);
+			parser.generateOuput(files);
 			tester.process(parser.m_hostmap);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -75,17 +75,6 @@ public class TooManyHops {
 					}
 				}
 			}
-			
-
-		}
-
-		for(Map.Entry<String, Integer> entry : unreachableAddresses.entrySet()) {
-			System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
-
-		}
-		
-		for(String addr : reachableAddresses) {
-			System.out.println("Addr: " + addr);
 		}
 		
 		System.out.println("Time of day pattern");

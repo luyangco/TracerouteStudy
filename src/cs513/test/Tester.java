@@ -14,10 +14,13 @@ import cs513.parser.TracerouteLogParser;
 
 public class Tester {
 	
-	// select the dataset to be analysed
-	private static final String DATASET = "trace_1";
+	// select the dataset to be analysed, either "trace_1" or "trace_2"
+	private static final String DATASET = "trace_2";
 
-	/* Main entry for generating the data */
+	/* 
+	 * Main entry for generating the data 
+	 * To run routing symmetry, run the main() in RoutingSymmetry.java 
+	 */
 	public static void main(String[] args) {
 		
 		// compress the files to reduce the process time
@@ -25,7 +28,6 @@ public class Tester {
 		try {
 			TracerouteLogParser.processFiles("output_" + DATASET, files, null);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -34,6 +36,19 @@ public class Tester {
 		ErroneousRouting errRouting = new ErroneousRouting();
 		RoutingLoops routeLoop = new RoutingLoops();
 		TemporaryOutage outage = new TemporaryOutage();
-		RoutingSymmetry routSym = new RoutingSymmetry();
+		
+		File[] outputFiles = new File("output_" + DATASET).listFiles();
+
+		OutputParser outputParser = new OutputParser();
+		
+		try {
+			outputParser.generateOuput(outputFiles);
+			routeLoop.process(outputParser.m_hostmap);
+			tooManyHop.process(outputParser.m_hostmap);
+			errRouting.process(outputParser.m_hostmap);
+			outage.process(outputParser.m_hostmap);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

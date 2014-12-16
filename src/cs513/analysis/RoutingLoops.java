@@ -1,14 +1,11 @@
 package cs513.analysis;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import cs513.model.IPaddress;
 import cs513.model.RoutingPath;
-import cs513.parser.OutputParser;
 
 public class RoutingLoops {
 
@@ -16,23 +13,6 @@ public class RoutingLoops {
 	int[] tempLoops = new int[2];
 	int totalPaths = 0;
 	int numTimeouts = 0;
-
-	public static void main(String[] args) {
-
-		RoutingLoops tester = new RoutingLoops();
-		File[] files = new File("output_trace_1").listFiles();
-
-
-		OutputParser parser = new OutputParser();
-		try {
-			parser.showFiles(files);
-			tester.process(parser.m_hostmap);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-
-	}
 
 	public void process(
 			HashMap<String, HashMap<String, ArrayList<RoutingPath>>> m_hostmap) {
