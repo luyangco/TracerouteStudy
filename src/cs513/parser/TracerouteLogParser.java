@@ -88,12 +88,9 @@ public class TracerouteLogParser {
 				FileWriter fstream = null;
 				fstream = new FileWriter(basedir + "\\" + f.getName()+".txt");
 				BufferedWriter out = new BufferedWriter(fstream);
-				long startTime = System.currentTimeMillis();
 				System.out.println("Directory: " + f.getName());
 				processFiles(basedir, f.listFiles(), out);
 				out.close();
-				long endTime = System.currentTimeMillis();
-				System.out.println("enduration: " + (endTime - startTime) / 1000 + " s");
 			} else {
 				extractFile(f, bw);
 			}
@@ -127,17 +124,6 @@ public class TracerouteLogParser {
 				lineNum++;
 			}
 			fileReader.close();
-//			System.out.println("Contents of file:");
-//			System.out.println(stringBuffer.toString());
-
-//			System.out.println("DestIP: " + path.getDestIP());
-//			int pathSize = path.getPath().size();
-//			IPaddress lastNode = path.getPath().get(pathSize - 1);
-			
-//			if (path.getDestIP().ipToString().equalsIgnoreCase(lastNode.ipToString()) &&
-//					path.getPath().size() == 1) {
-//				return;
-//			}
 			bw.write("Dest: " + path.getDestIP());
 			bw.newLine();
 			bw.write("Timestamp: " + timestamp);
@@ -155,18 +141,4 @@ public class TracerouteLogParser {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	public static void main(String[] args) {
-		File[] files = new File("trace_1").listFiles();
-		try {
-			processFiles("output_trace_1", files, null);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-	}
-
 }
