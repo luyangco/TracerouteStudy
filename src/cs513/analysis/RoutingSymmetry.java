@@ -19,6 +19,8 @@ public class RoutingSymmetry {
 
 	private int[] symmetricPath = new int[30];
 	private int totalPath = 0;
+	
+	private static final String DATASET = "trace_1";
 
 	public void process(HashMap<String, HashMap<String, ArrayList<RoutingPath>>> hostmap) {
 		for(Map.Entry<String, HashMap<String, ArrayList<RoutingPath>>> entry : hostmap.entrySet()) {
@@ -76,7 +78,7 @@ public class RoutingSymmetry {
 
 	public static void main(String[] args) {
 		RoutingSymmetry routSym = new RoutingSymmetry();
-		File[] files = new File("output_trace_1").listFiles();
+		File[] files = new File("output_" + DATASET).listFiles();
 
 		SimplifyParser parser = new SimplifyParser();
 		try {

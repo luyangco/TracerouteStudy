@@ -13,14 +13,17 @@ import cs513.parser.SimplifyParser;
 import cs513.parser.TracerouteLogParser;
 
 public class Tester {
+	
+	// select the dataset to be analysed
+	private static final String DATASET = "trace_1";
 
 	/* Main entry for generating the data */
 	public static void main(String[] args) {
 		
 		// compress the files to reduce the process time
-		File[] files = new File("trace_1").listFiles();
+		File[] files = new File(DATASET).listFiles();
 		try {
-			TracerouteLogParser.processFiles(files, null);
+			TracerouteLogParser.processFiles("output_" + DATASET, files, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,27 +35,5 @@ public class Tester {
 		RoutingLoops routeLoop = new RoutingLoops();
 		TemporaryOutage outage = new TemporaryOutage();
 		RoutingSymmetry routSym = new RoutingSymmetry();
-		
-		File[] outputFiles = new File("output_trace_1").listFiles();
-
-		OutputParser outputParser = new OutputParser();
-		
-		try {
-			outputParser.showFiles(outputFiles);
-			routeLoop.process(outputParser.m_hostmap);
-			tooManyHop.process(outputParser.m_hostmap);
-			errRouting.process(outputParser.m_hostmap);
-			outage.process(outputParser.m_hostmap);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		SimplifyParser simParser = new SimplifyParser();
-		try {
-			simParser.showFiles(outputFiles);
-			routSym.process(simParser.m_hostmap);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 }

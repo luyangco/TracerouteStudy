@@ -82,15 +82,15 @@ public class TracerouteLogParser {
         }
 	}
 	
-	public static void processFiles(File[] files, BufferedWriter bw) throws IOException {
+	public static void processFiles(String basedir, File[] files, BufferedWriter bw) throws IOException {
 		for (File f : files) {
 			if (f.isDirectory()) {
 				FileWriter fstream = null;
-				fstream = new FileWriter(f.getName()+".txt");
+				fstream = new FileWriter(basedir + "\\" + f.getName()+".txt");
 				BufferedWriter out = new BufferedWriter(fstream);
 				long startTime = System.currentTimeMillis();
 				System.out.println("Directory: " + f.getName());
-				processFiles(f.listFiles(), out);
+				processFiles(basedir, f.listFiles(), out);
 				out.close();
 				long endTime = System.currentTimeMillis();
 				System.out.println("enduration: " + (endTime - startTime) / 1000 + " s");
@@ -160,7 +160,7 @@ public class TracerouteLogParser {
 	public static void main(String[] args) {
 		File[] files = new File("trace_1").listFiles();
 		try {
-			processFiles(files, null);
+			processFiles("output_trace_1", files, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
